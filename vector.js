@@ -71,6 +71,8 @@ class Vector {
 
     floor() { return new Vector(Math.floor(this.x), Math.floor(this.y)); }
 
+    ceil() { return new Vector(Math.ceil(this.x), Math.ceil(this.y)); }
+
     swap() { return new Vector(this.y, this.x); }
 
     static fromAngle(a) { return new Vector(Math.cos(a), Math.sin(a)); }
