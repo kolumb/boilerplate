@@ -1,4 +1,12 @@
 "use strict";
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message)
+    }
+}
+function todo() {
+    assert(false, "Not implemented.")
+}
 function Enum(list) {
     return list.reduce(
         (enumeration, element, i) => {
@@ -16,6 +24,7 @@ const EVENT = Enum([
     "pointerup",
     "keydown",
     "keyup",
+    "click",
 ]);
 
 function mod(n, limit) {
@@ -51,6 +60,15 @@ const distPointToLine = (p, l1, l2) =>
 
 const determinant = (p, l1, l2) =>
     (l2.x - l1.x) * (p.y - l1.y) - (l2.y - l1.y) * (p.x - l1.x);
+
+function normalizeAngle(a) {
+    a %= Math.PI * 2
+    return a > Math.PI
+        ? a - 2 * Math.PI
+        : a < -Math.PI
+            ? a + 2 * Math.PI
+            : a
+}
 
 function toggleFullScreen() {
     if (!document.fullscreenElement) {

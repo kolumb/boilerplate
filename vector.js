@@ -23,6 +23,9 @@ class Vector {
     dot(v) { return this.x * v.x + this.y * v.y; }
 
     mult(v) { return new Vector(this.x * v.x, this.y * v.y); }
+    divide(v) {
+        return new Vector(this.x / v.x, this.y / v.y);
+    }
 
     dist(v) { return Math.hypot(this.x - v.x, this.y - v.y); }
 
@@ -32,6 +35,9 @@ class Vector {
         return dx * dx + dy * dy;
     }
 
+    angle() {
+        return Math.atan2(this.x, this.y);
+    }
     angleTo(v) {
         const dx = v.x - this.x;
         const dy = v.y - this.y;
@@ -75,7 +81,11 @@ class Vector {
 
     swap() { return new Vector(this.y, this.x); }
 
+    max() { return Math.max(this.y, this.x); }
+
     static fromAngle(a) { return new Vector(Math.cos(a), Math.sin(a)); }
+
+    static random() { return Vector.fromAngle(Math.PI * 2 * Math.random())}
 
     drawFrom(v) {
         ctx.beginPath();
