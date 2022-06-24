@@ -5,10 +5,6 @@ let pause = true;
 let lastFrameTime = 0;
 // noise.seed(0);
 
-let width;
-let height;
-let lesser;
-let bigger;
 Screen.updateSize();
 
 frame();

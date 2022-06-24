@@ -77,6 +77,53 @@ const KEY = {
     down: "ArrowDown",
     left: "ArrowLeft",
     right: "ArrowRight",
+    enter: "Enter",
+    backspace: "Backspace",
+    escape: "Escape",
+    tab: "Tab",
+    control: "ControlLeft",
+    meta: "MetaLeft",
+    shift: "ShiftLeft",
+    alt: "AltLeft",
+    controlRight: "ControlRight",
+    metaRight: "MetaRight",
+    shiftRight: "ShiftRight",
+    altRight: "AltRight",
+    capsLock: "CapsLock",
+    contextMenu: "ContextMenu",
+    scrollLock: "ScrollLock",
+    backquote: "Backquote",
+    equal: "Equal",
+    minus: "Minus",
+    comma: "Comma",
+    period: "Period",
+    slash: "Slash",
+    quote: "Quote",
+    semicolon: "Semicolon",
+    bracketLeft: "BracketLeft",
+    bracketRight: "BracketRight",
+    pause: "Pause",
+    delete: "Delete",
+    insert: "Insert",
+    home: "Home",
+    end: "End",
+    pageUp: "PageUp",
+    pageDown: "PageDown",
+    printScreen: "PrintScreen",
+    numEnter: "NumpadEnter",
+    numDecimal: "NumpadDecimal",
+    numAdd: "NumpadAdd",
+    numSub: "NumpadSubtract",
+    numMul: "NumpadMultiply",
+    numDiv: "NumpadDivide",
+    launchApp2: "LaunchApp2",
+    mediaTrackPrevious: "MediaTrackPrevious",
+    mediaTrackNext: "MediaTrackNext",
+    audioVolumeMute: "AudioVolumeMute",
+    audioVolumeDown: "AudioVolumeDown",
+    audioVolumeUp: "AudioVolumeUp",
+    mediaPlayPause: "MediaPlayPause",
+    mediaStop: "MediaStop",
 };
 for (
     let charCode = "a".charCodeAt(0);
@@ -84,5 +131,12 @@ for (
     charCode++
 ) {
     KEY[String.fromCharCode(charCode)] =
-        "Key" + String.fromCharCode(charCode - 32);
+        "Key" + String.fromCharCode(charCode).toUpperCase();
+}
+for (let i = 0; i < 10; i++) {
+    KEY[`digit${i}`] = `Digit${i}`;
+    KEY[`num${i}`] = `Numpad${i}`;
+}
+for (let i = 1; i <= 12; i++) {
+    KEY[`f${i}`] = `F${i}`;
 }
