@@ -36,7 +36,7 @@ class Vector {
     }
 
     angle() {
-        return Math.atan2(this.x, this.y);
+        return Math.atan2(this.y, this.x);
     }
     angleTo(v) {
         const dx = v.x - this.x;
