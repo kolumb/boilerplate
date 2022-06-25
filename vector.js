@@ -3,6 +3,7 @@ class Vector {
         this.x = x;
         this.y = y;
     }
+    copy() { return new Vector(this.x, this.y); }
     length() { return Math.hypot(this.x, this.y); }
 
     normalized() { return this.scale(1 / this.length()); }
@@ -43,6 +44,12 @@ class Vector {
         const dy = v.y - this.y;
         return Math.atan2(dy, dx);
     }
+    rotate(angle) {
+        return Vector.fromAngle(this.angle() + angle).scale(this.length())
+    }
+    rotateMut(angle) {
+        this.setFrom(this.rotate(angle))
+    }
 
     scale(f) { return new Vector(this.x * f, this.y * f); }
     scaleMut(f) {
@@ -50,13 +57,19 @@ class Vector {
         this.y *= f;
         return this;
     }
-    copy() { return new Vector(this.x, this.y); }
+    flip() { return this.scale(-1); }
 
     set(x, y) {
         this.x = x;
         this.y = y;
         return this;
     }
+    setFrom(v) {
+        this.x = v.x;
+        this.y = v.y;
+        return this;
+    }
+
     clamp(max) {
         const length = this.length();
         if (length > max && length > 0) {
