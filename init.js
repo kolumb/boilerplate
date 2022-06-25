@@ -1,6 +1,7 @@
 "use strict";
 const canvas = document.querySelector("#Canvas");
 const ctx = canvas.getContext("2d", { alpha: false });
+Ctx.ctx = ctx;
 let pause = true;
 let lastFrameTime = 0;
 // noise.seed(0);

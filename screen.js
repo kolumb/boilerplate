@@ -3,7 +3,7 @@ class Screen {
         Screen.size = new Vector(window.innerWidth, window.innerHeight);
         canvas.width = Screen.size.x;
         canvas.height = Screen.size.y;
-        Screen.center = Screen.size.divide(2)
+        Screen.center = Screen.size.scale(0.5)
         // ctx.imageSmoothingEnabled = false;
         // ctx.font = "15px sans-serif"
         Screen.lesser = Math.min(Screen.size.x, Screen.size.y);

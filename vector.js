@@ -86,11 +86,12 @@ class Vector {
     static fromAngle(a) { return new Vector(Math.cos(a), Math.sin(a)); }
 
     static random() { return Vector.fromAngle(Math.PI * 2 * Math.random())}
+    static zero = new Vector(0, 0)
 
     drawFrom(v) {
-        ctx.beginPath();
-        ctx.moveTo(v.x, v.y);
-        ctx.lineTo(v.x + this.x, v.y + this.y);
-        ctx.stroke();
+        Ctx.beginPath();
+        Ctx.moveTo(v);
+        Ctx.lineTo(v.add(this));
+        Ctx.stroke();
     }
 }

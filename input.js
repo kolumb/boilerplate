@@ -10,7 +10,7 @@ class Input {
     static downState = false;
 
     static pointerdownHandler(e) {
-        Input.pointer.set(e.offsetX, e.offsetY);
+        Input.pointer.set(e.offsetX, e.offsetY); // e.clientY - canvas.offsetTop
         Input.downState = true;
     }
     static pointermoveHandler(e) {

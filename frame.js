@@ -4,8 +4,8 @@ const SECOND = 1000;
 
 function tick(lag) {}
 function render() {
-    ctx.fillStyle = pause ? "rgb(200,200,200)" : "rgb(240,240,240)";
-    ctx.fillRect(0, 0, Screen.size.x, Screen.size.y);
+    Ctx.fillStyle(pause ? "rgb(200,200,200)" : "rgb(240,240,240)");
+    Ctx.fillRect(Vector.zero, Screen.size);
 }
 
 function frame(timestamp) {
