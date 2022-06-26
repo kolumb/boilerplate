@@ -17,16 +17,6 @@ function Enum(list) {
     );
 }
 
-const EVENT = Enum([
-    "resize",
-    "pointerdown",
-    "pointermove",
-    "pointerup",
-    "keydown",
-    "keyup",
-    "click",
-]);
-
 function mod(n, limit) {
     return ((n % limit) + limit) % limit;
 }
@@ -80,6 +70,6 @@ function toggleFullScreen() {
     }
 }
 
-function getNoise(pos, amplitude) {
-    return amplitude * noise.simplex2(pos.x, pos.y);
-}
+// function getNoise(pos, amplitude) {
+//     return amplitude * noise.simplex2(pos.x, pos.y);
+// }

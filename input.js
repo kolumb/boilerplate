@@ -71,6 +71,17 @@ class Input {
     }
 }
 
+const EVENT = Enum([
+    "resize",
+    "pointerdown",
+    "pointermove",
+    "pointerup",
+    "keydown",
+    "keyup",
+    "click",
+    "wheel",
+]);
+
 const KEY = {
     space: "Space",
     up: "ArrowUp",
