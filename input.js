@@ -80,6 +80,8 @@ const EVENT = Enum([
     "keyup",
     "click",
     "wheel",
+    "copy",
+    "paste",
 ]);
 
 const KEY = {
