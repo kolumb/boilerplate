@@ -5,7 +5,7 @@ class Sprite {
     constructor(path) {
         path ?? console.error("Cannot create sprite without path to image");
         this.texture = new Image();
-        this.texture.src = Sprite.folder + "/" + path;
+        this.texture.src = Sprite.folder ? Sprite.folder + "/" + path : path;
         Sprite.totalSprites++
         this.texture.addEventListener("load", e => {
             Sprite.loadedSprites++
