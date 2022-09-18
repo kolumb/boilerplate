@@ -1,10 +1,13 @@
 ## Boilerplate for \<canvas /\> projects
-With each project that I use it - it gains new functionality. Maybe in future it will get better architecture.
+Majority of my project share the same "boilerplate" code to make page look like an app and have decent support of different devices.
 | File | Purpose |
 | --- | --- |
-| [init.js](#init.js) | Constants and global variables |
-| [listeners.js](#listeners.js) | Functions to handle browser events |
-| [frame.js](#frame.js) | Functions to handle browser events |
-| [input.js](#input.js) | Class for centralized storage of input state |
-| [utils.js](#utils.js) | Typical helper functions |
-| [vector.js](#vector.js) | Vector math class |
+| [init.js](#init.js) | Entry point and global variables |
+| [sprite.js](#sprite.js) | Class that manages sprite loading |
+| [frame.js](#frame.js) | Rendering and update loop |
+| [ctx.js](#ctx.js) | Wrapper for Context functions to use them with Vector class |
+| [screen.js](#screen.js) | Class that stores and updates canvas size |
+| [input.js](#input.js) | Class with event handlers |
+| [utils.js](#utils.js) | Helper functions |
+| [perlin.js](#perlin.js) | Optional function for perlin noise |
+| [vector.js](#vector.js) | Class for vector math |
