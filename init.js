@@ -8,7 +8,7 @@ let lastFrameTime = 0;
 
 Screen.updateSize();
 
-frame();
+frame(0);
 
 window.addEventListener(EVENT.resize, Screen.resizeHandler);
 canvas.addEventListener(EVENT.pointerdown, Input.pointerdownHandler);
